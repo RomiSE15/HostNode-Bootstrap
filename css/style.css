@@ -1,0 +1,116 @@
+body {
+    background-image: url('../images/fon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f1f2f6;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.text-gold {
+    color: #f39c12 !important;
+}
+
+.btn-warning {
+    background-color: #f39c12 !important;
+    border-color: #f39c12 !important;
+    color: #121417 !important;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background-color: #e67e22 !important;
+}
+
+.btn-outline-warning {
+    color: #f39c12 !important;
+    border-color: #f39c12 !important;
+}
+
+.btn-outline-warning:hover {
+    background-color: #f39c12 !important;
+    color: #121417 !important;
+}
+
+.card, .custom-box {
+    background-color: rgba(19, 24, 34, 0.92) !important;
+    border: 1px solid #2d3748 !important;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #f39c12;
+    object-fit: cover;
+}
+
+.responsive-title {
+    font-size: 2.2rem;
+    color: #f39c12;
+}
+
+.responsive-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 991px) {
+    .responsive-title {
+        font-size: 1.7rem;
+    }
+    .responsive-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .responsive-title {
+        font-size: 1.3rem;
+    }
+    .responsive-text {
+        font-size: 0.85rem;
+    }
+}
+
+.pure-card-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.pure-card {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: rgba(19, 24, 34, 0.92);
+    border: 1px solid #2d3748;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 991px) {
+    .pure-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .pure-card {
+        flex: 1 1 100%;
+    }
+}
+
+.carousel-item img {
+    height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+}

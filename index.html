@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Setup - HostNode Minecraft</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning sticky-top px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand text-gold fw-bold" href="index.html">
+                <img src="images/logo2.png" alt="HostNode Logo" height="28" class="d-inline-block align-text-top me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active fw-bold text-gold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="config.html">Config</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="plugins.html">Plugins</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <section class="row g-4 mb-4">
+            <div class="col-12 col-lg-6">
+                <div class="card h-100 p-4 shadow-sm">
+                    <h2 class="text-gold h3 mb-3">PaperMC Server Setup</h2>
+                    <p class="text-light">Follow these step-by-step instructions to run a high-performance Minecraft server on your local PC:</p>
+                    <ol class="text-light mb-3">
+                        <li>Install <strong>Java JDK 21</strong> on your operating system.</li>
+                        <li>Download the latest <code>paper.jar</code> build from the official site.</li>
+                        <li>Place the jar in a dedicated folder and generate files using a startup script.</li>
+                        <li>Accept the license agreement by setting <code>eula=true</code> in <code>eula.txt</code>.</li>
+                    </ol>
+                    <div class="mt-auto pt-3">
+                        <div class="btn-group" role="group" aria-label="Action Buttons">
+                            <a href="https://papermc.io/downloads/paper" target="_blank" class="btn btn-warning">Download Paper</a>
+                            <a href="config.html" class="btn btn-outline-warning">View Config</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="card h-100 p-4 shadow-sm">
+                    <h2 class="text-gold h3 mb-3">Startup Script (run.bat)</h2>
+                    <p class="text-light">Create a batch file inside your server directory with flags allocating optimal RAM:</p>
+                    <pre class="bg-black text-warning p-3 rounded border border-secondary"><code>java -Xms2G -Xmx4G -jar paper.jar nogui
+pause</code></pre>
+                    <img src="images/console.png" alt="Server Console Output" class="img-fluid rounded border border-secondary mt-2">
+                </div>
+            </div>
+        </section>
+
+        <section class="row g-4 mt-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 p-3 text-center">
+                    <h3 class="h5 text-gold">Server Core</h3>
+                    <p class="text-secondary mb-1">PaperMC 1.21</p>
+                    <span class="badge bg-success w-50 mx-auto">Stable Release</span>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 p-3 text-center">
+                    <h3 class="h5 text-gold">Environment</h3>
+                    <p class="text-secondary mb-1">JDK 21+ Required</p>
+                    <span class="badge bg-info text-dark w-50 mx-auto">64-Bit Ready</span>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-lg-4">
+                <div class="card h-100 p-3 text-center">
+                    <h3 class="h5 text-gold">Default Port</h3>
+                    <p class="text-secondary mb-1">25565 (TCP)</p>
+                    <span class="badge bg-warning text-dark w-50 mx-auto">Localhost Ready</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-center py-3 border-top border-secondary mt-auto">
+        <div class="container">
+            <p class="text-secondary mb-0">Created by: Ramazan Zhunusov, Islam Baimagambet | Group: SE-2515</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
