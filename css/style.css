@@ -1,4 +1,5 @@
 body {
+    background-color: #0f121a;
     background-image: url('../images/fon.png');
     background-size: cover;
     background-position: center;
@@ -9,6 +10,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.4s ease;
 }
 
 main {
@@ -113,4 +115,76 @@ main {
     height: 420px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+.faq-item {
+    border: 1px solid #2d3748;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: rgba(15, 18, 26, 0.85);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #f39c12;
+    font-weight: bold;
+    padding: 14px 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background-color: rgba(243, 156, 18, 0.1);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 16px;
+    color: #f1f2f6;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-answer.open {
+    max-height: 150px;
+    padding: 0 16px 14px 16px;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background-color: #131822;
+    border: 2px solid #f39c12;
+    border-radius: 10px;
+    padding: 25px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #f1f2f6;
+    font-size: 1.5rem;
+    cursor: pointer;
 }

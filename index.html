@@ -18,11 +18,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 align-items-lg-center">
                     <li class="nav-item"><a class="nav-link active fw-bold text-gold" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-light" href="config.html">Config</a></li>
                     <li class="nav-item"><a class="nav-link text-light" href="plugins.html">Plugins</a></li>
                     <li class="nav-item"><a class="nav-link text-light" href="about.html">About Us</a></li>
+                    <li class="nav-item"><button id="bgColorBtn" class="btn btn-outline-warning btn-sm">Change BG</button></li>
+                    <li class="nav-item"><button id="openPopupBtn" class="btn btn-warning btn-sm">Subscribe</button></li>
                 </ul>
             </div>
         </div>
@@ -35,10 +37,10 @@
                     <h2 class="text-gold h3 mb-3">PaperMC Server Setup</h2>
                     <p class="text-light">Follow these step-by-step instructions to run a high-performance Minecraft server on your local PC:</p>
                     <ol class="text-light mb-3">
-                        <li>Install <strong>Java JDK 21</strong> on your operating system.</li>
-                        <li>Download the latest <code>paper.jar</code> build from the official site.</li>
-                        <li>Place the jar in a dedicated folder and generate files using a startup script.</li>
-                        <li>Accept the license agreement by setting <code>eula=true</code> in <code>eula.txt</code>.</li>
+                        <li>Install <strong>Java JDK 21</strong> on your operating system</li>
+                        <li>Download the latest <code>paper.jar</code> build from the official site</li>
+                        <li>Place the jar in a dedicated folder and generate files using a startup script</li>
+                        <li>Accept the license agreement by setting <code>eula=true</code> in <code>eula.txt</code></li>
                     </ol>
                     <div class="mt-auto pt-3">
                         <div class="btn-group" role="group" aria-label="Action Buttons">
@@ -84,13 +86,27 @@ pause</code></pre>
             </div>
         </section>
     </main>
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-box">
+            <button id="closePopupBtn" class="popup-close" aria-label="Close">&times;</button>
+            <h3 class="text-gold h5 mb-2">Subscribe to Updates</h3>
+            <p class="text-light small mb-3">Get notified about new PaperMC builds and optimization guides</p>
+            <form id="popupForm">
+                <input type="text" id="subEmail" class="form-control mb-3" placeholder="Enter your email...">
+                <button type="submit" class="btn btn-warning w-100">Subscribe Now</button>
+                <p id="popupMessage" class="small mt-2 mb-0 text-center"></p>
+            </form>
+        </div>
+    </div>
 
     <footer class="bg-dark text-center py-3 border-top border-secondary mt-auto">
         <div class="container">
+            <p id="currentDateTime" class="text-warning small mb-1"></p>
             <p class="text-secondary mb-0">Created by: Ramazan Zhunusov, Islam Baimagambet | Group: SE-2515</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
