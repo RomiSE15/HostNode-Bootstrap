@@ -188,3 +188,9 @@ main {
     font-size: 1.5rem;
     cursor: pointer;
 }
+.btn {
+    transition: transform 0.15s ease-in-out;
+}
+.btn-pressed {
+    transform: scale(0.92);
+}
