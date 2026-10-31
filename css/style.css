@@ -143,16 +143,9 @@ main {
 }
 
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 16px;
+    display: none;
+    padding: 14px 16px;
     color: #f1f2f6;
-    transition: max-height 0.35s ease, padding 0.35s ease;
-}
-
-.faq-answer.open {
-    max-height: 150px;
-    padding: 0 16px 14px 16px;
 }
 
 .popup-overlay {
@@ -188,9 +181,53 @@ main {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
 .btn {
     transition: transform 0.15s ease-in-out;
 }
+
 .btn-pressed {
     transform: scale(0.92);
+}
+#scrollBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: #f39c12;
+    width: 0%;
+    z-index: 999999 !important;
+    transition: width 0.05s linear;
+}
+.search-highlight {
+    background-color: #f39c12;
+    color: #121417;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 0 3px;
+}
+.custom-toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #1b262c;
+    color: #f1f2f6;
+    border-left: 4px solid #f39c12;
+    padding: 14px 20px;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: none;
+    font-size: 0.95rem;
+}
+#searchSuggestions .list-group-item {
+    background-color: #131822;
+    color: #f1f2f6;
+    border-color: #2d3748;
+    cursor: pointer;
+}
+
+#searchSuggestions .list-group-item:hover {
+    background-color: #f39c12;
+    color: #121417;
 }
